@@ -1,0 +1,3 @@
+# Cleanup stale remote branches
+git fetch
+git remote prune origin
