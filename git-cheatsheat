@@ -1,3 +1,13 @@
+# Deature branch + pull request flow
+
+## Create a feature branch
+git checkout -b my_feature
+... do some work, add commits
+
+## Create a pull_request 0 branch from the current tip of my_feature
+git checkout -b pull_requests/my_feature/0
+git push --set-upstream origin pull_requests/my_feature/0
+
 # Cleanup stale remote branches
 git fetch
 git remote prune origin
