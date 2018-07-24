@@ -1,4 +1,4 @@
-# Deature branch + pull request flow
+# Feature branch + pull request flow
 
 ## Create a feature branch
 git checkout -b my_feature
