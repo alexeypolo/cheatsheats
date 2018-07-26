@@ -1,12 +1,21 @@
-# Feature branch + pull request flow
+# A short lived feature branch that will result in 1 pull request
+git checkout -b pull_requests/my_feature
+.. do some work, make commits
+git push -u origin pull_requests/my_feature
+
+# Long playing feature branch + N pull requests flow
 
 ## Create a feature branch
 git checkout -b my_feature
-... do some work, add commits
-
-## Create a pull_request 0 branch from the current tip of my_feature
-git checkout -b pull_requests/my_feature/0
-git push --set-upstream origin pull_requests/my_feature/0
+... do some work, make 5 commits
+git checkout -b pull_requests/my_feature/0 HEAD~5
+git push -u origin pull_requests/my_feature/0
+git checkout my_feature
+... do some more work, make 3 commits
+git checkout -b pull_requests/my_feature/1 HEAD~3
+git push -u origin pull_requests/my_feature/1
+git checkout my_feature
+... continue working on feature
 
 # Cleanup stale remote branches
 git fetch
