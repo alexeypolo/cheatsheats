@@ -1,3 +1,10 @@
+# Drop local commits on "master"
+git reset --hard origin/master
+
+# Cleanup stale remote branches
+git fetch
+git remote prune origin
+
 # A short lived feature branch that will result in 1 pull request
 git checkout -b pull_requests/my_feature
 .. do some work, make commits
@@ -16,7 +23,3 @@ git checkout -b pull_requests/my_feature/1 HEAD~3
 git push -u origin pull_requests/my_feature/1
 git checkout my_feature
 ... continue working on feature
-
-# Cleanup stale remote branches
-git fetch
-git remote prune origin
